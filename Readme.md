@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Mary Tsigler](https://up.htmlacademy.ru/adaptive/22/user/1033353).
-* Наставник: `Неизвестно`.
+* Наставник: [Натали Белоева](https://htmlacademy.ru/profile/id1123699).
 
 ---
 
