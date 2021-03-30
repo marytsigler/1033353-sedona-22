@@ -43,21 +43,15 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="visually-hidden">
-        Форма отзыва
-      </h1>
       <section class="intro">
         <div class="intro__background intro__background--review">
           <img class="intro__img intro__img--review" src="img/mobile/text-sedona.svg" width="229" height="39" alt="Текст Седона">
         </div>
         <div class="intro__content promo-content">
           <div class="promo-content__wrapper">
-            <h2 class="visually-hidden">
-              Отзыв о Седоне
-            </h2>
-            <p class="promo-content__title">
+            <h1 class="promo-content__title">
               Оставьте свой отзыв
-            </p>
+            </h1>
             <p class="promo-content__text">
               Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
             </p>
@@ -66,9 +60,9 @@
       </section>
       <form class="feedback" action="https://echo.htmlacademy.ru" method="get">
         <fieldset class="feedback__data">
-          <h3 class="feedback__title">
+          <h2 class="feedback__title">
             Представьтесь:
-          </h3>
+          </h2>
           <ul class="feedback__list">
             <li class="feedback__item">
               <label class="feedback__label">
@@ -91,9 +85,9 @@
           </ul>
         </fieldset>
         <fieldset class="feedback__data">
-          <h3 class="feedback__title">
+          <h2 class="feedback__title">
             Контактная информация:
-          </h3>
+          </h2>
           <ul class="feedback__list">
             <li class="feedback__item">
               <label class="feedback__label">
@@ -110,67 +104,68 @@
           </ul>
         </fieldset>
         <fieldset class="feedback__data">
-          <h3 class="feedback__title">
+          <h2 class="feedback__title">
             Ваше общее впечатление:
-          </h3>
+          </h2>
           <ul class="feedback__list">
             <li class="feedback__item item-radio">
-              <input class="feedback__input item-radio__input" id="positive" type="radio" name="impression" value="1">
-                <label class="feedback__label item-radio__label" for="positive">
+              <input class="item-radio__input" id="positive" type="radio" name="impression" value="1" checked>
+                <label class="item-radio__label" for="positive">
                   Скорее положительное
                 </label>
             </li>
             <li class="feedback__item item-radio">
-              <input class="feedback__input item-radio__input" id="negative" type="radio" name="impression" value="2">
-                <label class="feedback__label item-radio__label" for="negative">
+              <input class="item-radio__input" id="negative" type="radio" name="impression" value="2">
+                <label class="item-radio__label" for="negative">
                   Скорее отрицательное
                 </label>
             </li>
             <li class="feedback__item item-radio">
-              <input class="feedback__input item-radio__input" id="no-answer" type="radio" name="impression" value="3">
-                <label class="feedback__label item-radio__label" for="no-answer">
-                  Затрудняюсь ртветить
+              <input class="item-radio__input" id="no-answer" type="radio" name="impression" value="3">
+                <label class="item-radio__label" for="no-answer">
+                  Затрудняюсь ответить
                 </label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="feedback__data">
-          <h3 class="feedback__title">
+          <h2 class="feedback__title">
             Посещенные достопримечательности:
-          </h3>
+          </h2>
           <ul class="feedback__list">
             <li class="feedback__item item-checkbox">
-              <input class="feedback__item item-checkbox__input" id="bridge" type="checkbox" name="bridge" checked>
-                <label class="feedback__label item-checkbox__label" for="bridge">
+              <input class="item-checkbox__input" id="bridge" type="checkbox" name="bridge" checked>
+                <label class="item-checkbox__label" for="bridge">
                   Мост Дьявола
                 </label>
             </li>
-            <li class="feedback__item item-checkbox ">
+            <li class="feedback__item item-checkbox">
               <input class="item-checkbox__input" id="mount" type="checkbox" name="mountain" checked>
-                <label class="feedback__label item-checkbox__label" for="mount">
+                <label class="item-checkbox__label" for="mount">
                   Гора-Колокол
                 </label>
             </li>
             <li class="feedback__item item-checkbox">
               <input class="item-checkbox__input" id="park" type="checkbox" name="slide-park" checked>
-                <label class="feedback__label item-checkbox__label" for="park">
+                <label class="item-checkbox__label" for="park">
                   Слайд-парк
                 </label>
             </li>
             <li class="feedback__item item-checkbox">
               <input class="item-checkbox__input" id="cliff" type="checkbox" name="red-cliff">
-                <label class="feedback__label item-checkbox__label" for="cliff">
+                <label class="item-checkbox__label" for="cliff">
                   Красные скалы
                 </label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="feedback__data">
-          <label class="feedback__title" for="message">
-            Опишите свои эмоции:
+          <label class="visually-hidden">Поле сообщения
+            <h2 class="feedback__title">
+              Опишите свои эмоции:
+            </h2>
+            <textarea class="feedback__message" name="emotions-text" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
           </label>
-          <textarea class="feedback__message" id="message" name="emotions-text" cols="30" rows="10" placeholder="Опишите подробно все свои восторги">
-          </textarea>
         </fieldset>
         <button class="feedback__button button" type="submit" >
           Отправить отзыв
