@@ -8,14 +8,15 @@
   line-height: 26px;
 }
 
-.page-footer__list{
+.page-footer__list {
   list-style: none;
   display: flex;
 }
 
-.page-footer__item{
+.page-footer__item {
   margin-right: 6px;
 }
+
 .page-footer__link {
   display: block;
   position: relative;
@@ -24,10 +25,12 @@
   height: 48px;
   background-color: @main-accent;
 }
+
 .page-footer__link:hover {
   background-color: @main-accent-hover;
 }
-.page-footer__link:active{
+
+.page-footer__link:active {
   background-color: @main-accent-down;
 }
 
@@ -37,13 +40,13 @@
   display: block;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
-.page-footer__link:active:before {
+.page-footer__link:active::before {
   opacity: 0.3;
-
 }
+
 .page-footer__link--tw::before {
   background: url("../../img/mobile/twitter-icon.svg") no-repeat;
   width: 18px;
@@ -61,11 +64,12 @@
   width: 20px;
   height: 14px;
 }
+
 .copyright__link {
   display: inline-block;
   vertical-align: middle;
-  width:27px;
-  height:35px;
+  width: 27px;
+  height: 35px;
 }
 
 .copyright__link:hover .copyright__logo-icon path { // при наведении иконка меняет заливку
