@@ -7,3 +7,71 @@
   font-weight: 700;
   line-height: 26px;
 }
+
+.page-footer__list{
+  list-style: none;
+  display: flex;
+}
+
+.page-footer__item{
+  margin-right: 6px;
+}
+.page-footer__link {
+  display: block;
+  position: relative;
+  align-items: center;
+  width: 46px;
+  height: 48px;
+  background-color: @main-accent;
+}
+.page-footer__link:hover {
+  background-color: @main-accent-hover;
+}
+.page-footer__link:active{
+  background-color: @main-accent-down;
+}
+
+.page-footer__link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.page-footer__link:active:before {
+  opacity: 0.3;
+
+}
+.page-footer__link--tw::before {
+  background: url("../../img/mobile/twitter-icon.svg") no-repeat;
+  width: 18px;
+  height: 15px;
+}
+
+.page-footer__link--fb::before {
+  background: url("../../img/mobile/facebook-icon.svg") no-repeat;
+  width: 9px;
+  height: 19px;
+}
+
+.page-footer__link--yt::before {
+  background: url("../../img/mobile/youtube-icon.svg") no-repeat;
+  width: 20px;
+  height: 14px;
+}
+.copyright__link {
+  display: inline-block;
+  vertical-align: middle;
+  width:27px;
+  height:35px;
+}
+
+.copyright__link:hover .copyright__logo-icon path { // при наведении иконка меняет заливку
+  fill: @main-accent;
+}
+
+.copyright__link:active .copyright__logo-icon path { // при клике иконка меняет заливку
+  fill: @black-medium;
+}
