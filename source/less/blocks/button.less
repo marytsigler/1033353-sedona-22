@@ -1,0 +1,28 @@
+.button {
+  background-color: @main-accent;
+  color: @basic-white;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 14px 17px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: @main-accent-hover;
+}
+
+.button:active {
+  background-color: @main-accent-down;
+  color: @white-medium;
+}
+
+.button:disabled {
+  background-color: @object-disabled;
+}
