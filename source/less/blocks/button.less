@@ -13,17 +13,18 @@
   padding: 14px 17px;
   text-decoration: none;
   cursor: pointer;
-}
+  text-transform: uppercase;
 
-.button:hover {
-  background-color: @main-accent-hover;
-}
+  &:hover {
+    background-color: @main-accent-hover;
+  }
 
-.button:active {
-  background-color: @main-accent-down;
-  color: @white-medium;
-}
+  &:active {
+    background-color: @main-accent-down;
+    color: @white-medium;
+  }
 
-.button:disabled {
-  background-color: @object-disabled-grey;
+  &:disabled {
+    background-color: @object-disabled-grey;
+  }
 }

@@ -1,0 +1,20 @@
+.copyright {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.copyright__link {
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
+  height: 35px;
+
+  &:hover .copyright__logo-icon path { // при наведении иконка меняет заливку
+    fill: @main-accent;
+  }
+
+  &:active .copyright__logo-icon path { // при клике иконка меняет заливку
+    fill: @black-medium;
+  }
+}

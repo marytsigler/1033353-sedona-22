@@ -35,27 +35,27 @@
   width: 46px;
   height: 48px;
   background-color: @main-accent;
-}
 
-.page-footer__link:hover {
-  background-color: @main-accent-hover;
-}
+  &:hover {
+    background-color: @main-accent-hover;
+  }
 
-.page-footer__link:active {
-  background-color: @main-accent-down;
-}
+  &:active {
+    background-color: @main-accent-down;
+  }
 
-.page-footer__link::before {
-  content: "";
-  position: absolute;
-  display: block;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-.page-footer__link:active::before {
-  opacity: 0.3;
+  &:active::before {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__link--tw::before {
@@ -75,25 +75,4 @@
   background: url("../img/mobile/icon-youtube.svg") no-repeat;
   width: 20px;
   height: 14px;
-}
-
-.copyright {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.copyright__link {
-  display: inline-block;
-  vertical-align: middle;
-  width: 27px;
-  height: 35px;
-}
-
-.copyright__link:hover .copyright__logo-icon path { // при наведении иконка меняет заливку
-  fill: @main-accent;
-}
-
-.copyright__link:active .copyright__logo-icon path { // при клике иконка меняет заливку
-  fill: @black-medium;
 }
