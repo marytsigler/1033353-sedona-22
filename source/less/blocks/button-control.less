@@ -1,0 +1,33 @@
+.button-control {
+  border: 0;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button-control--replay {
+  margin-right: 133px;
+}
+
+.button-control--subtitles {
+  margin-right: 31px;
+}
+
+.button-control--fullscreen {
+  margin-left: auto;
+}
+
+.button-control__icon {
+  display: block;
+
+  &:hover {
+    fill: @control-hover; //здесь цвет светлее, хоть указала в fill в svg
+  }
+
+  &:active {
+    fill: @control-hover;
+    opacity: 0.3;
+  }
+}
