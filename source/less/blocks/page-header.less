@@ -1,8 +1,25 @@
 .page-header {
   background-color: @basic-white;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: -28px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
 }
 
 .page-header__logo {
   width: 102px;
   height: 84px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }

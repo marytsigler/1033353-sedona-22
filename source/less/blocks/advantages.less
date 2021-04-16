@@ -1,23 +1,79 @@
 .advantages {
+  position: relative;
   margin-bottom: 24px;
   text-align: center;
+  background-color: @main-accent;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/mobile/dekoline.svg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 37px;
+    top: 0;
+    left: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .advantages__list {
   list-style: none;
   margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.advantages__item--first {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+  }
 }
 
 .advantages__text-box {
   background-color: @main-accent;
-  padding-top: 34px;
+  padding-top: 39px;
   padding-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    padding: 45px 20px 26px;
+    width: 33.333%;
+    height: 256px;
+  }
+}
+
+.advantages__text-box--first {
+  padding-top: 73px;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 32px;
+  }
 }
 
 .advantages__title {
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 18px;
 }
@@ -33,38 +89,87 @@
 }
 
 .advantages__img {
-  margin-bottom: 35px;
+  display: block;
+  width: 100%;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    height: 256px;
+  }
 }
+
+.advantages__img-box {
+  @media (min-width: @tablet-width) {
+    width: 66.666%;
+    min-height: 256px;
+    height: auto;
+  }
+}
+//Recommend list
 
 .advantages__recommend-list {
   margin: 0;
+  padding: 26px 20px 35px;
   list-style: none;
-  margin-bottom: 35px;
   text-align: left;
-}
+  background-color: @basic-white;
 
-.advantages__item--additional {
-  background-color: @background-grey;
-  padding: 26px 26px 24px;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    margin: 0;
+    padding: 63px 31px 63px 36px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    padding: 0;
+    margin-top: 63px;
+    margin-bottom: 63px;
+    padding-left: 36px;
+    padding-right: 31px;
+    text-align: center;
+  }
 }
 
 .advantages__recommend-item {
+  position: relative;
   margin-bottom: 26px;
+  padding-left: 49px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
-.advantages__recommend-item--rooms {
+.advantages__recommend-item::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: -10px;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+}
+
+.advantages__recommend-item--rooms::before {
   background-image: url("../img/mobile/icon-house.svg");
   background-repeat: no-repeat;
+  background-size: 39px 37px;
 }
 
-.advantages__recommend-item--presents {
+.advantages__recommend-item--presents::before {
   background-image: url("../img/mobile/icon-gift.svg");
   background-repeat: no-repeat;
+  background-size: 32px 38px;
 }
 
-.advantages__recommend-item--food {
+.advantages__recommend-item--food::before {
   background-image: url("../img/mobile/icon-burger.svg");
   background-repeat: no-repeat;
+  background-size: 40px 35px;
 }
 
 .advantages__recommend-item:last-child {
@@ -72,12 +177,31 @@
 }
 
 .advantages__recommend-title {
-  padding: 0;
   margin: 0;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
 .advantages__recommend-text {
-  padding: 0;
   margin: 0;
+}
+
+.advantages__item--additional {
+  background-color: @background-grey;
+  display: block;
+  border-bottom: 1px solid @grey-border;
+  padding: 26px 26px 24px;
+
+  @media (min-width: @tablet-width) {
+    width: 33.333333%;
+    padding: 42px 60px 42px; // размеры в макете все разные, пока сделала один размер для всех
+    border-bottom: none;
+  }
+}
+
+.advantages__item--bridge {
+  @media (min-width: @tablet-width) {
+    flex-direction: row-reverse;
+    width: 100%;
+  }
 }
