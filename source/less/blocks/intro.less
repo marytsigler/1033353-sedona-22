@@ -1,9 +1,21 @@
 .intro {
-  background: url("../img/mobile/background-pict.jpg") no-repeat;
+  background: url("../img/mobile/background-pict.jpg");
+  background-repeat: no-repeat;
   background-position: center top;
   background-color: @background-light;
-  margin-bottom: 11px;
   text-align: center;
+  background-size: 768px 389px;
+
+  @media (min-width: @tablet-width) {
+    background: url("../img/tablet/back-middle.jpg") no-repeat;
+    margin-bottom: 0;
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: url("../img/desktop/back-big.jpg") no-repeat;
+  }
 }
 
 .intro--review {
@@ -12,10 +24,88 @@
 }
 
 .intro__background {
+  position: relative;
   padding-top: 90px;
-  padding-bottom: 85px;
+  padding-bottom: 79px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 77px;
+    padding-bottom: 91px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.intro__background::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 56px;
+  background-size: 100% 57px;
+  left: 0;
+  bottom: 0;
+  background-image: url("../img/mobile/intro-triangle.svg");
+  background-repeat: no-repeat;
+}
+
+.intro__img {
+  width: 282px;
+  height: 214px;
+
+  @media (min-width: @tablet-width) {
+    width: 461px;
+    height: 350px;
+  }
 }
 
 .intro__background--review {
   margin-bottom: 36px;
+}
+
+.intro__content {
+  background-color: @basic-white;
+  padding: 32px 20px 11px;
+
+  @media (min-width: @tablet-width) {
+    padding: 44px 124px 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 55px 358px 41px;
+  }
+}
+
+.intro__content--review {
+  padding-bottom: 16px;
+}
+
+.intro__content--catalog {
+  padding-bottom: 20px;
+}
+
+.intro__title {
+  margin: 0;
+  padding: 0;
+  color: @basic-black;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+}
+
+.intro__text {
+  margin: 0;
+  padding: 0;
+  line-height: 26px;
+}
+
+.intro__text--review {
+  line-height: 24px;
 }
