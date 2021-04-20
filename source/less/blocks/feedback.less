@@ -1,6 +1,21 @@
 .feedback {
   width: 100%;
   margin-bottom: 77px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    padding: 0 60px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 120px;
+  }
 }
 
 .feedback__data {
@@ -9,6 +24,70 @@
   border: 0;
   border-bottom: 1px solid @object-disabled-grey;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+.feedback__data--personality {
+  @media (min-width: @tablet-width) {
+    order: 1;
+    width: 40%;
+  }
+}
+
+.feedback__data--contacts {
+  @media (min-width: @tablet-width) {
+    order: 2;
+    width: 100%;
+    margin-bottom: 52px;
+  }
+}
+
+.feedback__data--emotions {
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    order: 0;
+    position: relative;
+    width: 50%;
+    margin-bottom: 0;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 292px;
+      top: -90%;
+      right: 0;
+      transform: translate(50%, 50%);
+      background-color: @grey-line;
+    }
+  }
+}
+
+.feedback__data--choice {
+  @media (min-width: @tablet-width) {
+    order: 3;
+    width: 100%;
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 74px;
+  }
+}
+
+.feedback__data--message {
+  border-bottom: none;
+  margin-bottom: 51px;
+
+  @media (min-width: @tablet-width) {
+    order: 4;
+    width: 100%;
+  }
 }
 
 .feedback__title {
@@ -18,18 +97,175 @@
   font-weight: 700;
   line-height: 26px;
   text-align: center;
-  margin-bottom: 19px;
   color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+}
+
+.feedback__title--personality {
+  margin-bottom: 19px;
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
+  }
+}
+
+.feedback__title--contacts {
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 72px;
+  }
+}
+
+.feedback__title--emotions {
+  margin-bottom: 37px;
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 73px;
+  }
+}
+
+.feedback__title--choice {
+  margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 59px;
+    width: min-content;
+  }
+}
+
+.feedback__title--message {
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
+  }
 }
 
 .feedback__list {
   list-style: none;
   margin: 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback__list--choice {
+  @media (min-width: @tablet-width) {
+    padding-left: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+  }
+}
+
+
+.feedback__list--contacts {
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.feedback__item {
+  width: 100%;
+}
+
+.feedback__item--personality {
+  margin-bottom: 20px;
+}
+
+.feedback__item--personality:last-child {
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 73px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 71px;
+  }
+}
+
+.feedback__item--contacts {
+  margin-bottom: 14px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+  }
+}
+
+.feedback__item--contacts::after {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 26px;
+  width: 58px;
+  height: 58px;
+
+  @media (min-width: @tablet-width) {
+    bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+  }
+}
+
+.feedback__item--contacts:last-child {
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 480px;
+  }
 }
 
 .feedback__label {
   line-height: 26px;
+  display: flex;
+  align-items: center;
+}
+
+.feedback__label--сontacts {
   display: block;
+  padding-right: 15px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    padding-right: 0;
+  }
+}
+
+.feedback__span {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .feedback__input {
@@ -41,7 +277,8 @@
   background-color: @grey-normal;
   border: none;
   padding: 18px 22px 14px;
-  margin-bottom: 20px;
+  margin-left: 15px;
+  width: 100%;
 
   &:hover {
     background-color: @grey-hover;
@@ -53,23 +290,10 @@
   }
 }
 
-.feedback__item--contacts {
-  position: relative;
-}
-
 .feedback__input--contacts::placeholder {
   color: @basic-black;
 }
 
-.feedback__item--contacts::after {
-  content: "";
-  position: absolute;
-  display: block;
-  right: 0;
-  top: 26px;
-  width: 58px;
-  height: 58px;
-}
 
 .feedback__item--phone::after {
   background-image: url("../img/mobile/phone.svg");
@@ -80,19 +304,6 @@
 .feedback__item--mail::after {
   background-image: url("../img/mobile/mail.svg");
   background-repeat: no-repeat;
-}
-
-.feedback__title--choice {
-  margin-bottom: 36px;
-}
-
-.feedback__data--message {
-  border-bottom: none;
-  margin-bottom: 51px;
-}
-
-.feedback__title--message {
-  margin-bottom: 15px;
 }
 
 .feedback__message {
@@ -110,3 +321,55 @@
 .feedback__message::placeholder {
   color: @basic-black;
 }
+
+.feedback__submit {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    order: 5;
+    width: 100%;
+  }
+}
+
+.feedback__button {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+}
+
+.feedback__field {
+  margin: 0;
+  line-height: 26px;
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+/*.feedback__title--contacts {
+  margin-bottom: 17px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 21px;
+    display: flex;
+    align-items: center;
+
+    &::before, &::after {
+      position: absolute;
+      content: "";
+      flex-grow: 1;
+      flex-shrink: 0;
+      height: 1px;
+      width: 123px;
+      background-color: @grey-line;
+    }
+
+    &::before {
+      margin-right: 46px;
+    }
+
+    &::after {
+      margin-right: 46px;
+    }
+  }
+}*/
