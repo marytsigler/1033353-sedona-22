@@ -1,59 +1,82 @@
 .intro {
-  background: url("../img/mobile/background-pict.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-color: @background-light;
   text-align: center;
-  background-size: 768px 389px;
-
-  @media (min-width: @tablet-width) {
-    background: url("../img/tablet/back-middle.jpg") no-repeat;
-    margin-bottom: 0;
-    background-size: cover;
-    background-position: center;
-  }
-
-  @media (min-width: @desktop-width) {
-    background: url("../img/desktop/back-big.jpg") no-repeat;
-  }
 }
 
 .intro--review {
   border-bottom: 1px solid @object-disabled-grey;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
 }
 
 .intro__background {
+  background: url("../img/mobile/background-pict.jpg") no-repeat;
+  background-position: center bottom;
+  background-color: @background-light;
+  background-size: cover;
   position: relative;
   padding-top: 90px;
-  padding-bottom: 79px;
+  padding-bottom: 85px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 57px;
+    background-size: 100% 57px;
+    left: 0;
+    bottom: 0;
+    background-image: url("../img/mobile/intro-triangle.svg");
+    background-repeat: no-repeat;
+  }
 
   @media (min-width: @tablet-width) {
+    background: url("../img/tablet/back-middle.jpg") no-repeat;
     padding-top: 77px;
-    padding-bottom: 91px;
+    padding-bottom: 92px;
+    background-size: cover;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    background: url("../img/desktop/back-big.jpg") no-repeat;
+    padding-top: 78px;
+    padding-bottom: 91px;
+    background-size: cover;
   }
 }
 
-.intro__background::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 56px;
-  background-size: 100% 57px;
-  left: 0;
-  bottom: 0;
-  background-image: url("../img/mobile/intro-triangle.svg");
-  background-repeat: no-repeat;
+.intro__background--review {
+  background: url("../img/mobile/back-small.jpg") no-repeat;
+  background-position: center bottom;
+  background-color: @background-light;
+  background-size: cover;
+  position: relative;
+  padding-top: 51px;
+  padding-bottom: 65px;
+
+  @media (min-width: @tablet-width) {
+    background: url("../img/tablet/back-form-middle.jpg") no-repeat;
+    background-size: cover;
+    padding-top: 95px;
+    padding-bottom: 117px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: url("../img/desktop/back-form-big.jpg") no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
 }
 
 .intro__img {
   width: 282px;
   height: 214px;
+  display: block;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     width: 461px;
@@ -61,8 +84,9 @@
   }
 }
 
-.intro__background--review {
-  margin-bottom: 36px;
+.intro__img--review {
+  width: 229px;
+  height: 40px;
 }
 
 .intro__content {
@@ -79,7 +103,15 @@
 }
 
 .intro__content--review {
-  padding-bottom: 16px;
+  padding: 36px 20px 16px;
+
+  @media (min-width: @tablet-width) {
+    padding: 64px 168px 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 113px 383px 57px;
+  }
 }
 
 .intro__content--catalog {
@@ -100,6 +132,12 @@
   }
 }
 
+.intro__title--review {
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
+}
+
 .intro__text {
   margin: 0;
   padding: 0;
@@ -108,4 +146,9 @@
 
 .intro__text--review {
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    width: 435px;
+    margin: 0 auto;
+  }
 }

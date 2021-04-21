@@ -7,54 +7,55 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-img" src="img/mobile/logotype.svg" width="101" height="84" alt="Логотип Седона">
-      </a>
-      <!-- Навигация /!-->
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><!--Кнопка гамбургер</!-->
-          <span class="visually-hidden">
-            Открыть меню
-          </span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html">
-                Главная
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">
-                Фото и видео
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#!">
-                Форма отзыва
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#!">
-                HTML Academy
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <section class="intro intro--review">
-        <div class="intro__background intro__background--review">
-          <img class="intro__img" src="img/mobile/text-sedona.svg" width="229" height="39" alt="Текст Седона">
-        </div>
-        <div class="intro__content intro__content--review">
-            <h1 class="intro__title">
+    <div class="page-wrapper">
+      <header class="page-header">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-img" src="img/mobile/logotype.svg" width="101" height="84" alt="Логотип Седона">
+        </a>
+        <!-- Навигация /!-->
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button"><!--Кнопка гамбургер</!-->
+            <span class="visually-hidden">
+              Открыть меню
+            </span>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="index.html">
+                  Главная
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="catalog.html">
+                  Фото и видео
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#!">
+                  Форма отзыва
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#!">
+                  HTML Academy
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section class="intro intro--review">
+          <div class="intro__background intro__background--review">
+            <img class="intro__img intro__img--review" src="img/mobile/text-sedona.svg" width="229" height="39" alt="Текст Седона">
+          </div>
+          <div class="intro__content intro__content--review">
+            <h1 class="intro__title intro__title--review">
               Оставьте свой отзыв
             </h1>
             <p class="intro__text intro__text--review">
-              Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
+              Помогите нашим отелям стать лучше! Оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях
             </p>
         </div>
       </section>
@@ -62,24 +63,24 @@
         <h2 class="visually-hidden">
           Форма отзыва
         </h2>
-        <fieldset class="feedback__data">
-          <legend class="feedback__title">
+        <fieldset class="feedback__data feedback__data--personality">
+          <legend class="feedback__title feedback__title--personality">
             Представьтесь:
           </legend>
           <ul class="feedback__list">
-            <li class="feedback__item">
+            <li class="feedback__item feedback__item--personality">
               <label class="feedback__label">
                 Имя*:
                 <input class="feedback__input" type="text" name="name" value="Петр" required>
               </label>
             </li>
-            <li class="feedback__item">
+            <li class="feedback__item feedback__item--personality">
               <label class="feedback__label">
                 Фамилия*:
                 <input class="feedback__input" type="text" name="surname" value="Иванов" required>
               </label>
             </li>
-            <li class="feedback__item">
+            <li class="feedback__item feedback__item--personality">
               <label class="feedback__label">
                 Отчество:
                 <input class="feedback__input" type="text" value="Александрович" name="additional-name">
@@ -87,27 +88,27 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="feedback__data">
-          <legend class="feedback__title">
+        <fieldset class="feedback__data feedback__data--contacts">
+          <legend class="feedback__title feedback__title--contacts">
             Контактная информация:
           </legend>
-          <ul class="feedback__list">
+          <ul class="feedback__list feedback__list--contacts">
             <li class="feedback__item feedback__item--contacts feedback__item--phone">
               <label class="feedback__label feedback__label--сontacts">
-                Контактный телефон*:
+                <span class="feedback__span">Контактный&nbsp;</span> телефон*:
                 <input class="feedback__input feedback__input--contacts" type="tel" name="phone-number" placeholder="Введите телефон" required>
               </label>
             </li>
             <li class="feedback__item feedback__item--contacts feedback__item--mail">
               <label class="feedback__label feedback__label--сontacts">
-                Электронная почта*:
+                Электронная&nbsp;почта*:
                 <input class="feedback__input feedback__input--contacts" type="email" name="mail" placeholder="Введите e-mail" required>
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="feedback__data">
-          <legend class="feedback__title feedback__title--choice">
+        <fieldset class="feedback__data feedback__data--emotions">
+          <legend class="feedback__title feedback__title--emotions">
             Ваше общее впечатление:
           </legend>
           <ul class="feedback__list">
@@ -131,11 +132,11 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="feedback__data">
+        <fieldset class="feedback__data feedback__data--choice">
           <legend class="feedback__title feedback__title--choice">
             Посещенные достопримечательности:
           </legend>
-          <ul class="feedback__list">
+          <ul class="feedback__list feedback__list--choice">
             <li class="feedback__item item-checkbox">
               <input class="item-checkbox__input" id="bridge" type="checkbox" name="bridge" checked>
                 <label class="item-checkbox__label" for="bridge">
@@ -169,56 +170,62 @@
           <label class="visually-hidden">Поле сообщения</label>
           <textarea class="feedback__message" name="emotions-text" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
-        <button class="feedback__button button" type="submit">
-          Отправить отзыв
-        </button>
-      </form>
-    </main>
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <h2 class="visually-hidden">
-          Контакты в соцсетях
-        </h2>
-        <div class="page-footer__social">
-          <p class="page-footer__text">
-            #visitsedona
+        <div class="feedback__submit">
+          <button class="feedback__button button" type="submit">
+            Отправить отзыв
+          </button>
+          <p class="feedback__field">
+            * — обязательные поля
           </p>
         </div>
-          <ul class="page-footer__list">
-            <li class="page-footer__item">
-              <a class="page-footer__link page-footer__link--tw" href="#!">
+      </form>
+    </main>
+      <footer class="page-footer">
+        <div class="page-footer__wrapper">
+          <h2 class="visually-hidden">
+            Контакты в соцсетях
+          </h2>
+          <div class="page-footer__social">
+            <p class="page-footer__text">
+              #visitsedona
+            </p>
+          </div>
+            <ul class="page-footer__list">
+              <li class="page-footer__item">
+                <a class="page-footer__link page-footer__link--tw" href="#!">
+                  <span class="visually-hidden">
+                    Твиттер
+                  </span>
+                </a>
+              </li>
+              <li class="page-footer__item">
+                <a class="page-footer__link page-footer__link--fb" href="#!">
+                  <span class="visually-hidden">
+                    ВКонтакте
+                  </span>
+                </a>
+              </li>
+              <li class="page-footer__item">
+                <a class="page-footer__link page-footer__link--yt" href="#!">
+                  <span class="visually-hidden">
+                    Ютуб
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="page-footer__copyright copyright">
+              Разработано
+              <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
                 <span class="visually-hidden">
-                  Твиттер
+                  Логотип HTML Academy
                 </span>
+                <svg class="copyright__logo-icon" width="27" height="35" viewBox="0 0 27 35" fill="black" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"/>
+                </svg>
               </a>
-            </li>
-            <li class="page-footer__item">
-              <a class="page-footer__link page-footer__link--fb" href="#!">
-                <span class="visually-hidden">
-                  ВКонтакте
-                </span>
-              </a>
-            </li>
-            <li class="page-footer__item">
-              <a class="page-footer__link page-footer__link--yt" href="#!">
-                <span class="visually-hidden">
-                  Ютуб
-                </span>
-              </a>
-            </li>
-          </ul>
-          <p class="page-footer__copyright copyright">
-            Разработано
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <span class="visually-hidden">
-                Логотип HTML Academy
-              </span>
-              <svg class="copyright__logo-icon" width="27" height="35" viewBox="0 0 27 35" fill="black" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"/>
-              </svg>
-            </a>
-          </p>
-      </div>
-    </footer>
+            </p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
