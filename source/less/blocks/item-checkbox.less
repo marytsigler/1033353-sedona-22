@@ -2,6 +2,20 @@
   margin-bottom: 54px;
   position: relative;
 
+  &:last-child {
+    margin-bottom: 39px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &:nth-child(3) {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     width: 50%;
     margin-bottom: 62px;
@@ -9,20 +23,6 @@
 
   @media (min-width: @desktop-width) {
     width: 25%;
-    margin-bottom: 0;
-  }
-}
-
-.item-checkbox:last-child {
-  margin-bottom: 39px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 0;
-  }
-}
-
-.item-checkbox:nth-child(3) {
-  @media (min-width: @tablet-width) {
     margin-bottom: 0;
   }
 }

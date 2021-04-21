@@ -49,22 +49,22 @@
 .feedback__data--emotions {
   margin-bottom: 15px;
 
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 292px;
+    top: -90%;
+    right: 0;
+    transform: translate(50%, 50%);
+    background-color: @grey-line;
+  }
+
   @media (min-width: @tablet-width) {
     order: 0;
     position: relative;
     width: 50%;
     margin-bottom: 0;
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 1px;
-      height: 292px;
-      top: -90%;
-      right: 0;
-      transform: translate(50%, 50%);
-      background-color: @grey-line;
-    }
   }
 }
 
@@ -189,17 +189,17 @@
 
 .feedback__item--personality {
   margin-bottom: 20px;
-}
 
-.feedback__item--personality:last-child {
-  margin-bottom: 25px;
+  &:last-child {
+    margin-bottom: 25px;
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 73px;
-  }
+    @media (min-width: @tablet-width) {
+      margin-bottom: 73px;
+    }
 
-  @media (min-width: @desktop-width) {
-    margin-bottom: 71px;
+    @media (min-width: @desktop-width) {
+      margin-bottom: 71px;
+    }
   }
 }
 
@@ -214,35 +214,35 @@
   @media (min-width: @desktop-width) {
     width: 400px;
   }
-}
 
-.feedback__item--contacts::after {
-  content: "";
-  position: absolute;
-  display: block;
-  right: 0;
-  top: 26px;
-  width: 58px;
-  height: 58px;
+  &:last-child {
+    margin-bottom: 28px;
 
-  @media (min-width: @tablet-width) {
-    bottom: 0;
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 480px;
+    }
   }
 
-  @media (min-width: @desktop-width) {
-    top: 0;
-  }
-}
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 26px;
+    width: 58px;
+    height: 58px;
 
-.feedback__item--contacts:last-child {
-  margin-bottom: 28px;
+    @media (min-width: @tablet-width) {
+      bottom: 0;
+    }
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 480px;
+    @media (min-width: @desktop-width) {
+      top: 0;
+    }
   }
 }
 
@@ -294,7 +294,6 @@
   color: @basic-black;
 }
 
-
 .feedback__item--phone::after {
   background-image: url("../img/mobile/phone.svg");
   background-repeat: no-repeat;
@@ -316,10 +315,10 @@
   border: none;
   width: 100%;
   padding: 13px 23px;
-}
 
-.feedback__message::placeholder {
-  color: @basic-black;
+  &::placeholder {
+    color: @basic-black;
+  }
 }
 
 .feedback__submit {

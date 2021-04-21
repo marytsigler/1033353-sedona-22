@@ -161,19 +161,23 @@
   margin-bottom: 26px;
   padding-left: 49px;
 
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -10px;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
   }
-}
-
-.advantages__recommend-item::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: -10px;
-  width: 40px;
-  height: 40px;
-  background-position: center;
 }
 
 .advantages__recommend-item--rooms::before {
@@ -192,10 +196,6 @@
   background-image: url("../img/mobile/icon-burger.svg");
   background-repeat: no-repeat;
   background-size: 40px 35px;
-}
-
-.advantages__recommend-item:last-child {
-  margin-bottom: 0;
 }
 
 .advantages__recommend-title {

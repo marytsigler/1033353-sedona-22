@@ -21,6 +21,18 @@
   padding-top: 90px;
   padding-bottom: 85px;
 
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 57px;
+    background-size: 100% 57px;
+    left: 0;
+    bottom: 0;
+    background-image: url("../img/mobile/intro-triangle.svg");
+    background-repeat: no-repeat;
+  }
+
   @media (min-width: @tablet-width) {
     background: url("../img/tablet/back-middle.jpg") no-repeat;
     padding-top: 77px;
@@ -37,7 +49,7 @@
 }
 
 .intro__background--review {
-  background: url("../../img/mobile/back-small.jpg") no-repeat;
+  background: url("../img/mobile/back-small.jpg") no-repeat;
   background-position: center bottom;
   background-color: @background-light;
   background-size: cover;
@@ -46,30 +58,18 @@
   padding-bottom: 65px;
 
   @media (min-width: @tablet-width) {
-    background: url("../../img/tablet/back-form-middle.jpg") no-repeat;
+    background: url("../img/tablet/back-form-middle.jpg") no-repeat;
     background-size: cover;
     padding-top: 95px;
     padding-bottom: 117px;
   }
 
   @media (min-width: @desktop-width) {
-    background: url("../../img/desktop/back-form-big.jpg") no-repeat;
+    background: url("../img/desktop/back-form-big.jpg") no-repeat;
     background-size: cover;
     padding-top: 100px;
     padding-bottom: 120px;
   }
-}
-
-.intro__background::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 57px;
-  background-size: 100% 57px;
-  left: 0;
-  bottom: 0;
-  background-image: url("../img/mobile/intro-triangle.svg");
-  background-repeat: no-repeat;
 }
 
 .intro__img {
