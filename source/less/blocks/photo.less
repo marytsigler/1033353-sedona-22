@@ -1,17 +1,60 @@
 .photo {
   margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 63px;
+  }
+}
+
+.photo__wrapper {
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    max-width: 1200px;
+  }
 }
 
 .photo__list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .photo__item {
   border-bottom: 1px solid @object-disabled-grey;
   margin-bottom: 23px;
   padding-bottom: 15px;
+
+  &:first-child {
+    @media (min-width: @tablet-width) {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: 50%;
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 33.33%;
+  }
 }
 
 .photo__link {
@@ -21,24 +64,73 @@
 .photo__img {
   margin-bottom: 11px;
   display: block;
-  width: 280px;
-  height: 280px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .photo__description {
   line-height: 24px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    background-color: @grey-normal;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 15px 15px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    background-color: @black-medium;
+    position: absolute;
+    bottom: 0;
+    padding: 22px 15px 15px 21px;
+  }
+}
+
+.photo__description--special {
+  @media (min-width: @tablet-width) {
+    background-color: @grey-dark;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @black-medium;
+  }
 }
 
 .photo__content {
   margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
+  }
 }
 
 .photo__title {
   margin: 0;
   font-weight: 700;
+  margin-bottom: 3px;
 }
 
 .photo__author {
   margin: 0;
   text-transform: none;
+}
+
+.photo__likes {
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
+    opacity: 1;
+  }
 }

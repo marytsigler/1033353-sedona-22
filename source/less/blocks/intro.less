@@ -2,12 +2,20 @@
   text-align: center;
 }
 
-.intro--review {
+.intro--short {
   border-bottom: 1px solid @object-disabled-grey;
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+.intro--catalog {
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
     margin-bottom: 0;
   }
 }
@@ -48,7 +56,7 @@
   }
 }
 
-.intro__background--review {
+.intro__background--short {
   background: url("../img/mobile/back-small.jpg") no-repeat;
   background-position: center bottom;
   background-color: @background-light;
@@ -84,7 +92,7 @@
   }
 }
 
-.intro__img--review {
+.intro__img--short {
   width: 229px;
   height: 40px;
 }
@@ -116,6 +124,14 @@
 
 .intro__content--catalog {
   padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 65px 155px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 102px 372px;
+  }
 }
 
 .intro__title {
