@@ -8,26 +8,41 @@
 }
 
 .button-control--replay {
-  margin-right: 133px;
+  width: 16px;
 }
 
 .button-control--subtitles {
+  width: 32px;
+  margin-left: auto;
   margin-right: 31px;
 }
 
 .button-control--fullscreen {
-  margin-left: auto;
+  width: 20px;
 }
 
 .button-control__icon {
   display: block;
+  height: 20px;
 
   &:hover {
-    fill: @control-hover; //здесь цвет светлее, хоть указала в fill в svg
+    fill: @control-hover;
   }
 
   &:active {
     fill: @control-hover;
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    fill: @basic-white;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

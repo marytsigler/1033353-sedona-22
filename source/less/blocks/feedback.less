@@ -340,9 +340,10 @@
 .feedback__field {
   margin: 0;
   line-height: 26px;
+  display: none;
 
-  @media (max-width: @mobile-width-only) {
-    display: none;
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }
 /*.feedback__title--contacts {
