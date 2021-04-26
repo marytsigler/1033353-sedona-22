@@ -10,15 +10,19 @@
     <div class="page-wrapper">
       <header class="page-header">
         <a class="page-header__logo">
-          <img class="page-header__logo-img" src="img/mobile/logotype.svg" width="102" height="84" alt="Логотип Седона">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/desktop/logotype-big.svg">
+            <source media="(min-width: 768px)" srcset="img/tablet/logotype-middle.svg">
+            <img class="page-header__logo-img" src="img/mobile/logotype.svg" width="102" height="84" alt="Логотип Седона">
+          </picture>
         </a>
         <!-- Навигация /!-->
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button" aria-label="Открыть меню"><!--Кнопка гамбургер</!-->
+        <nav class="main-nav main-nav--closed">
+          <button class="main-nav__toggle main-nav__toggle--opened main-nav__toggle--closed" type="button" aria-label="Открыть меню"><!--Кнопка гамбургер</!-->
           </button>
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--current">
-              <a class="main-nav__link" href="#!">
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current" href="#!">
                 Главная
               </a>
             </li>
@@ -69,19 +73,18 @@
               <li class="advantages__item advantages__item--first">
                 <div class="advantages__text-box advantages__text-box--white advantages__text-box--first"><!--Блок с текстом</!-->
                   <h3 class="advantages__title advantages__title--special"><!-- белый текст</!-->
-                    Настоящий городок
+                    Настоящий <br> городок
                   </h3>
                   <span class="advantages__number">
                     — №1 —
                   </span>
                   <p class="advantages__text advantages__text--special"><!-- белый текст</!-->
-                    Седона не аттракцион для туристов,&nbsp;там течет своя жизнь
+                    Седона не аттракцион для туристов, там течет своя жизнь
                   </p>
                 </div>
                 <div class="advantages__img-box">
                   <img class="advantages__img" src="img/mobile/photo-city@1x.jpg" width="520" height="260" alt="Мотель в Седоне">
                 </div>
-
                 <ul class="advantages__recommend-list">
                   <li class="advantages__recommend-item advantages__recommend-item--rooms">
                     <h3 class="advantages__recommend-title">
@@ -104,7 +107,7 @@
                       Еда
                     </h3>
                     <p class="advantages__recommend-text">
-                      Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+                      Всегда заказывайте фирменный&nbsp;бургер, вы не разочаруетесь!
                     </p>
                   </li>
                 </ul>
@@ -112,7 +115,7 @@
               <li class="advantages__item advantages__item--bridge">
                 <div class="advantages__text-box advantages__text-box--white advantages__text-box--additional">
                   <h3 class="advantages__title advantages__title--special"><!-- белый текст</!-->
-                    Там есть мост дьявола
+                    Там есть мост&nbsp;дьявола
                   </h3>
                   <span class="advantages__number">
                     — №2 —
@@ -124,10 +127,12 @@
                 <div class="advantages__img-box">
                   <img class="advantages__img" src="img/mobile/photo-bridge@1x.jpg" width="520" height="260" alt="Мост дьявола в Седоне">
                 </div>
-                </li>
+              </li>
+            </ol>
+            <ol class="advantages__list advantages__list--additional">
               <li class="advantages__item advantages__item--additional">
                 <h3 class="advantages__title">
-                  Небольшая площадь
+                  Небольшая<br>площадь
                 </h3>
                 <span class="advantages__number">
                   — №3 —
@@ -138,7 +143,7 @@
               </li>
               <li class="advantages__item advantages__item--additional">
                 <h3 class="advantages__title">
-                  Красивая дорога
+                  Красивая<br> дорога
                 </h3>
                 <span class="advantages__number">
                   — №4 —
@@ -149,7 +154,7 @@
               </li>
               <li class="advantages__item advantages__item--additional">
                 <h3 class="advantages__title">
-                  Мало туристов
+                  Мало<br>туристов
                 </h3>
                 <span class="advantages__number">
                   — №5 —
@@ -172,7 +177,7 @@
             <p class="find-hotel__text">
               Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в Cедоне
             </p>
-            <a href="#!" class="find-hotel__button button disabled">
+            <a href="#!" class="button">
               Найти гостиницу
             </a>
           </div>
