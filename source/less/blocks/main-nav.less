@@ -1,28 +1,6 @@
 .main-nav {
   background-color: @basic-white;
-}
-
-.main-nav__toggle {
-  position: absolute;
-  top: 181px;
-  right: 21px;
-  width: 23px;
-  height: 22px;
-  border: 0;
-  background: url("../img/mobile/icon-menu-open.svg") no-repeat;
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
+  position: relative;
 }
 
 .main-nav__list {
@@ -35,7 +13,6 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
   }
 }
 
@@ -46,7 +23,11 @@
   text-align: center;
   background-color: @main-accent;
   border-bottom: 1px solid @shadow;
+  padding: 10px 6px;
   box-shadow: 0 1px 0 @shadow, inset 0 1px 0 @white-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   &:first-child {
     box-shadow: none;
@@ -55,6 +36,12 @@
   &:last-child {
     border-bottom: none;
     box-shadow: inset 0 1px 0 @white-light;
+  }
+
+  &:nth-child(3n) {
+    @media (min-width: @tablet-width) {
+      margin-left: auto;
+    }
   }
 
   &:hover {
@@ -80,77 +67,78 @@
     font-size: 14px;
     box-shadow: none;
     width: 20%;
+    padding: 0;
   }
 }
 
 .main-nav__link {
   text-decoration: none;
   color: @basic-white;
-
-  &:active {
-    color: @white-medium;
-  }
+  display: block;
 
   @media (min-width: @tablet-width) {
     color: @basic-black;
+  }
+
+  &:hover {
+    color: @main-accent;
+  }
+
+  &:active {
+    color: @black-medium;
+  }
+}
+
+.main-nav__link--current {
+  @media (min-width: @tablet-width) {
+    color: @menu-current;
 
     &:hover {
-      color: @main-accent;
+      color: @menu-current-hover;
     }
 
     &:active {
-      color: @black-medium;
+      opacity: 0.3;
     }
   }
 }
 
-// Закрыть кнопка
-/*
-.main-nav__toggle--close {
+.main-nav__toggle {
   position: absolute;
   padding: 0;
-  top: 150px;
-  right: 50px;
+  content: "";
   border: 0;
+  cursor: pointer;
+  display: block;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+// кнопка гамбургер при закрытом меню
+
+.main-nav--closed .main-nav__toggle--closed {
+  bottom: -42px;
+  right: 18px;
+  width: 25px;
+  height: 25px;
+  background: url("../img/mobile/icon-menu-closed.svg") no-repeat;
+}
+
+// кнопка крестик при открытом меню
+
+.main-nav--opened .main-nav__toggle--opened {
+  top: 17px;
+  right: 20px;
   width: 22px;
   height: 22px;
-  background-color: transparent;
-  cursor: pointer;
+  background: url("../img/mobile/icon-menu-opened.svg") no-repeat;
 }
-
-.main-nav__toggle--close::before, .main-nav__toggle-close::after {
-  content: "";
-  position: absolute;
-  display: block;
-  right: 0px;
-  top: 0px;
-  width: 27.5px;
-  height: 4px;
-  border-radius: 0;
-  cursor: pointer;
-  background-color: @basic-white;
-}
-
-.main-nav__toggle--close::before{
-  transform: rotate(45deg);
-}
-
-.main-nav__toggle--close::after{
-  transform: rotate(135deg);
-}
-
-/*.main-nav__link--current {
-  color: @menu-current;
-}
-.main-nav__link--current:hover {
-  color: @menu-current-hover;
-}
-.main-nav__link--current:active {
-  color: @menu-current-active;
-}
-.main-nav__link:hover {
-  color: @main-accent;
-}
-.main-nav__link:active {
-  color: @menu-down;
-}*/

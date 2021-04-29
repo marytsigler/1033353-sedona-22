@@ -1,6 +1,5 @@
 .page-footer {
-
-  padding: 39px 26px;
+  padding: 38px 20px;
 
   @media (min-width: @tablet-width) {
     padding: 36px 60px;
@@ -23,20 +22,17 @@
   }
 }
 
-.page-footer__social {
-  margin-bottom: 34px;
-
-  @media (min-width: @tablet-width) {
-    margin: 0;
-  }
-}
-
 .page-footer__text {
   margin: 0;
+  margin-bottom: 36px;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .page-footer__list {
@@ -44,11 +40,12 @@
   padding: 0;
   list-style: none;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    width: 157px;
   }
 }
 
