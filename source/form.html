@@ -9,12 +9,17 @@
   <body class="page__body">
     <div class="page-wrapper">
       <header class="page-header">
-        <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-img" src="img/mobile/logotype.svg" width="101" height="84" alt="Логотип Седона">
+        <a class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/desktop/logotype-big.svg">
+            <source media="(min-width: 768px)" srcset="img/tablet/logotype-middle.svg">
+            <img class="page-header__logo-img" src="img/mobile/logotype.svg" width="102" height="84" alt="Логотип Седона">
+          </picture>
         </a>
         <!-- Навигация /!-->
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button"><!--Кнопка гамбургер</!-->
+        <nav class="main-nav main-nav--closed main-nav--opened">
+          <button class="main-nav__toggle main-nav__toggle--opened main-nav__toggle--closed" type="button" aria-label="Открыть меню"><!--Кнопка гамбургер</!-->
+          </button>
             <span class="visually-hidden">
               Открыть меню
             </span>
@@ -48,7 +53,11 @@
       <main>
         <section class="intro intro--short">
           <div class="intro__background intro__background--short">
-            <img class="intro__img intro__img--short" src="img/mobile/text-sedona.svg" width="229" height="39" alt="Текст Седона">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/desktop/Sedona-big@1x.svg">
+              <source media="(min-width: 768px)" srcset="img/tablet/Sedona-middle@1x.svg">
+              <img class="intro__img intro__img--short" src="img/mobile/text-sedona.svg" width="229" height="39" alt="Текст Седона">
+            </picture>
           </div>
           <div class="intro__content intro__content--review">
             <h1 class="intro__title intro__title--review">
@@ -69,41 +78,43 @@
           </legend>
           <ul class="feedback__list">
             <li class="feedback__item feedback__item--personality">
-              <label class="feedback__label">
+              <label class="feedback__label feedback__label--personality" for="name">
                 Имя*:
-                <input class="feedback__input" type="text" name="name" value="Петр" required>
               </label>
+              <input class="feedback__input feedback__input--personality" id="name" type="text" name="name" value="Петр" required>
+
             </li>
             <li class="feedback__item feedback__item--personality">
-              <label class="feedback__label">
+              <label class="feedback__label feedback__label--personality" for="surname">
                 Фамилия*:
-                <input class="feedback__input" type="text" name="surname" value="Иванов" required>
               </label>
+                <input class="feedback__input feedback__input--personality" id="surname" type="text" name="surname" value="Иванов" required>
+
             </li>
             <li class="feedback__item feedback__item--personality">
-              <label class="feedback__label">
+              <label class="feedback__label feedback__label--personality" for="secondname">
                 Отчество:
-                <input class="feedback__input" type="text" value="Александрович" name="additional-name">
               </label>
+                <input class="feedback__input feedback__input--personality" id="secondname" type="text" value="Александрович" name="additional-name">
             </li>
           </ul>
         </fieldset>
         <fieldset class="feedback__data feedback__data--contacts">
-          <legend class="feedback__title feedback__title--contacts">
+          <legend class="feedback__title feedback__title--contacts feedback__title--dekoline">
             Контактная информация:
           </legend>
           <ul class="feedback__list feedback__list--contacts">
             <li class="feedback__item feedback__item--contacts feedback__item--phone">
-              <label class="feedback__label feedback__label--сontacts">
-                <span class="feedback__span">Контактный&nbsp;</span> телефон*:
-                <input class="feedback__input feedback__input--contacts" type="tel" name="phone-number" placeholder="Введите телефон" required>
+              <label class="feedback__label feedback__label--сontacts" for="contact-phone">
+                <span class="feedback__span">Контактный&nbsp;</span>телефон*:
               </label>
+              <input class="feedback__input feedback__input--contacts" id="contact-phone" type="tel" name="phone-number" placeholder="Введите телефон" required>
             </li>
             <li class="feedback__item feedback__item--contacts feedback__item--mail">
-              <label class="feedback__label feedback__label--сontacts">
+              <label class="feedback__label feedback__label--сontacts" for="contact-mail">
                 Электронная&nbsp;почта*:
-                <input class="feedback__input feedback__input--contacts" type="email" name="mail" placeholder="Введите e-mail" required>
               </label>
+              <input class="feedback__input feedback__input--contacts" id="contact-mail" type="email" name="mail" placeholder="Введите e-mail" required>
             </li>
           </ul>
         </fieldset>
@@ -133,8 +144,8 @@
           </ul>
         </fieldset>
         <fieldset class="feedback__data feedback__data--choice">
-          <legend class="feedback__title feedback__title--choice">
-            Посещенные достопримечательности:
+          <legend class="feedback__title feedback__title--choice feedback__title--dekoline">
+            Посещенные<br> достопримечательности:
           </legend>
           <ul class="feedback__list feedback__list--choice">
             <li class="feedback__item item-checkbox">
@@ -164,7 +175,7 @@
           </ul>
         </fieldset>
         <fieldset class="feedback__data feedback__data--message">
-          <legend class="feedback__title feedback__title--message">
+          <legend class="feedback__title feedback__title--message feedback__title--dekoline">
             Опишите свои эмоции:
           </legend>
           <label class="visually-hidden">Поле сообщения</label>
@@ -185,45 +196,43 @@
           <h2 class="visually-hidden">
             Контакты в соцсетях
           </h2>
-          <div class="page-footer__social">
-            <p class="page-footer__text">
-              #visitsedona
-            </p>
-          </div>
-            <ul class="page-footer__list">
-              <li class="page-footer__item">
-                <a class="page-footer__link page-footer__link--tw" href="#!">
-                  <span class="visually-hidden">
-                    Твиттер
-                  </span>
-                </a>
-              </li>
-              <li class="page-footer__item">
-                <a class="page-footer__link page-footer__link--fb" href="#!">
-                  <span class="visually-hidden">
-                    ВКонтакте
-                  </span>
-                </a>
-              </li>
-              <li class="page-footer__item">
-                <a class="page-footer__link page-footer__link--yt" href="#!">
-                  <span class="visually-hidden">
-                    Ютуб
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <p class="page-footer__copyright copyright">
-              Разработано
-              <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <p class="page-footer__text">
+            #visitsedona
+          </p>
+          <ul class="page-footer__list">
+            <li class="page-footer__item">
+              <a class="page-footer__link page-footer__link--tw" href="#!">
                 <span class="visually-hidden">
-                  Логотип HTML Academy
+                  Твиттер
                 </span>
-                <svg class="copyright__logo-icon" width="27" height="35" viewBox="0 0 27 35" fill="black" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"/>
-                </svg>
               </a>
-            </p>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link page-footer__link--fb" href="#!">
+                <span class="visually-hidden">
+                  ВКонтакте
+                </span>
+              </a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link page-footer__link--yt" href="#!">
+                <span class="visually-hidden">
+                  Ютуб
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="page-footer__copyright copyright">
+            Разработано
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <span class="visually-hidden">
+                Логотип HTML Academy
+              </span>
+              <svg class="copyright__logo-icon" width="27" height="35" viewBox="0 0 27 35" fill="black" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"/>
+              </svg>
+            </a>
+          </p>
         </div>
       </footer>
     </div>

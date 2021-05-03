@@ -53,7 +53,7 @@
 
   @media (min-width: @tablet-width) {
     position: relative;
-    flex-direction: row;
+    display: flex;
     width: 100%;
     min-height: 256px;
   }
@@ -75,42 +75,108 @@
   }
 }
 
-.advantages__text-box {
-  background-color: @main-accent;
-  padding-top: 40px;
-  padding-bottom: 37px;
-  width: 100%;
+.advantages__item--additional {
+  background-color: @background-grey;
+  padding: 27px 20px 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 167px;
 
   @media (min-width: @tablet-width) {
-    padding: 30px 22px 29px;
     width: 33.33%;
-    /*height: 256px;*/
+    padding: 43px 49px 40px; // размеры в макете все разные, пока сделала один размер для всех
+    border-bottom: none;
+    min-height: 256px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 45px 20px 26px;
+    padding: 37px 40px 61px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    background-color: #d6d6d6;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
+
+.advantages__item--bridge {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row-reverse;
+    width: 100%;
+    min-height: 256px;
+  }
+}
+
+
+.advantages__text-box {
+  background-color: @main-accent;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
     width: 33.33%;
-    /*height: 256px;*/
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 33.33%;
   }
 }
 
 .advantages__text-box--first {
-  padding-top: 73px;
+  padding: 73px 20px 39px 20px;
   position: relative;
+  min-height: 211px;
 
 
   @media (min-width: @tablet-width) {
-    padding: 40px 23px;
+    padding: 40px 32px 44px 32px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 46px 55px 60px;
+    padding: 47px 56px 57px 55px;
+  }
+}
+
+.advantages__text-box--white {
+  color: @basic-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 191px;
+}
+
+.advantages__text-box--bridge {
+  padding: 39px 20px 35px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 43px 36px 40px 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 51px 78px 53px 78px;
   }
 }
 
 .advantages__title {
   margin: 0 auto 14px;
-  padding: 0 20px;
   font-weight: 700;
   font-size: 18px;
 
@@ -150,44 +216,14 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 22px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 24px;
+  }
 }
 
 .advantages__text {
   margin: 0;
-  padding: 0 10px;
-
-  @media (min-width: @tablet-width) {
-    padding: 0;
-  }
-}
-
-.advantages__text--special {
-  @media (min-width: @tablet-width) {
-    padding: 0 10px;
-  }
-
-  @media (min-width: @tablet-width) {
-    padding: 0;
-  }
-}
-
-.advantages__text-box--white {
-  color: @basic-white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 191px;
-
-  /*@media (min-width: @tablet-width) {
-   min-height: 256px;
-  }*/
-}
-
-.advantages__text-box--additional {
-  @media (min-width: @desktop-width) {
-    padding: 51px 79px 53px;
-  }
 }
 
 .advantages__img {
@@ -198,6 +234,10 @@
 
   @media (min-width: @tablet-width) {
     height: 100%;
+    position: absolute;
+    top: 0;
+    width: 66.66%;
+    height: 100%;
   }
 }
 
@@ -205,20 +245,18 @@
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    width: 66.66%;
-    height: 100%;
-    top: 0;
-    position: absolute;
+    width: 0;
   }
 }
 
-.advantages__img-box--first {
+
+.advantages__img--first {
   @media (min-width: @tablet-width) {
     right: 0;
   }
 }
 
-.advantages__img-box--bridge {
+.advantages__img--bridge {
   @media (min-width: @tablet-width) {
     left: 0;
   }
@@ -372,52 +410,3 @@
   margin: 0;
 }
 
-.advantages__item--additional {
-  background-color: @background-grey;
-  padding: 27px 20px 24px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 167px;
-
-  @media (min-width: @tablet-width) {
-    width: 33.33%;
-    padding: 43px 49px 40px; // размеры в макете все разные, пока сделала один размер для всех
-    border-bottom: none;
-    min-height: 256px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 37px 57px 61px;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    height: 1px;
-    bottom: 0;
-    left: 20px;
-    right: 20px;
-    background-color: #d6d6d6;
-
-    @media (min-width: @tablet-width) {
-      display: none;
-    }
-  }
-
-  &:last-child::after {
-    display: none;
-  }
-}
-
-.advantages__item--bridge {
-  position: relative;
-
-  @media (min-width: @tablet-width) {
-    flex-direction: row-reverse;
-    width: 100%;
-    min-height: 256px;
-  }
-}

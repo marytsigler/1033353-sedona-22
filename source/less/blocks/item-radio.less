@@ -4,10 +4,17 @@
 
   &:last-child {
     margin-bottom: 41px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
   }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 52px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 98%;
   }
 }
 
@@ -16,7 +23,7 @@
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
-  padding-left: 70px;
+  padding-left: 78px;
   line-height: 26px;
   font-weight: 700;
   font-size: 18px;
@@ -45,6 +52,10 @@
     border-radius: 50%;
     transform: translateY(-50%);
     background-color: @basic-text;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 75px;
   }
 }
 
