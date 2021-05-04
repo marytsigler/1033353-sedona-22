@@ -20,34 +20,28 @@
         <nav class="main-nav main-nav--closed main-nav--opened">
           <button class="main-nav__toggle main-nav__toggle--opened main-nav__toggle--closed" type="button" aria-label="Открыть меню"><!--Кнопка гамбургер</!-->
           </button>
-            <span class="visually-hidden">
-              Открыть меню
-            </span>
-          </button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="index.html">
-                  Главная
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="catalog.html">
-                  Фото и видео
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link main-nav__link--current" href="#!">
-                  Форма отзыва
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="#!">
-                  HTML Academy
-                </a>
-              </li>
-            </ul>
-          </div>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">
+                Фото и видео
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current" href="!#">
+                Форма отзыва
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru/study">
+                HTML Academy
+              </a>
+            </li>
+          </ul>
         </nav>
       </header>
       <main>
@@ -78,18 +72,16 @@
           </legend>
           <ul class="feedback__list">
             <li class="feedback__item feedback__item--personality">
-              <label class="feedback__label feedback__label--personality" for="name">
+              <label class="feedback__label" for="name">
                 Имя*:
               </label>
               <input class="feedback__input feedback__input--personality" id="name" type="text" name="name" value="Петр" required>
-
             </li>
             <li class="feedback__item feedback__item--personality">
-              <label class="feedback__label feedback__label--personality" for="surname">
+              <label class="feedback__label" for="surname">
                 Фамилия*:
               </label>
                 <input class="feedback__input feedback__input--personality" id="surname" type="text" name="surname" value="Иванов" required>
-
             </li>
             <li class="feedback__item feedback__item--personality">
               <label class="feedback__label feedback__label--personality" for="secondname">
@@ -122,21 +114,21 @@
           <legend class="feedback__title feedback__title--emotions">
             Ваше общее впечатление:
           </legend>
-          <ul class="feedback__list">
+          <ul class="feedback__list feedback__list--emotions">
             <li class="feedback__item item-radio">
-              <input class="item-radio__input visually-hidden" id="positive" type="radio" name="impression" value="1" checked>
+              <input class="item-radio__input" id="positive" type="radio" name="impression" value="1" checked>
                 <label class="item-radio__label" for="positive">
                   Скорее положительное
                 </label>
             </li>
             <li class="feedback__item item-radio">
-              <input class="item-radio__input visually-hidden" id="negative" type="radio" name="impression" value="2">
+              <input class="item-radio__input" id="negative" type="radio" name="impression" value="2">
                 <label class="item-radio__label" for="negative">
                   Скорее отрицательное
                 </label>
             </li>
             <li class="feedback__item item-radio">
-              <input class="item-radio__input visually-hidden" id="no-answer" type="radio" name="impression" value="3">
+              <input class="item-radio__input" id="no-answer" type="radio" name="impression" value="3">
                 <label class="item-radio__label" for="no-answer">
                   Затрудняюсь ответить
                 </label>
@@ -235,6 +227,32 @@
           </p>
         </div>
       </footer>
+    </div>
+    <div class="popup popup--failure">
+      <h2 class="popup__title">
+        Что-то пошло не&nbsp;так!
+      </h2>
+      <p class="popup__text">
+        Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+      </p>
+      <button class="button popup__button popup__button--failure">
+        Oк
+      </button>
+    </div>
+    <div class="popup popup--success">
+      <div class="popup__block-text">
+        <h2 class="popup__title popup__title--success">
+          Ваш отзыв отправлен!
+        </h2>
+        <p class="popup__text popup__text--success">
+          Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.
+        </p>
+      </div>
+      <div class="popup__block-btn">
+          <button class="button popup__button popup__button--success">
+            Закрыть окно
+          </button>
+      </div>
     </div>
   </body>
 </html>

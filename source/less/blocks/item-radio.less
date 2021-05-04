@@ -1,17 +1,13 @@
 .item-radio {
-  margin-bottom: 43px;
+  margin-bottom: 11px;
   position: relative;
 
   &:last-child {
-    margin-bottom: 41px;
-
-    @media (min-width: @tablet-width) {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 52px;
+    margin-bottom: 19px;
   }
 
   @media (min-width: @desktop-width) {
@@ -22,13 +18,15 @@
 .item-radio__label {
   position: relative;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   cursor: pointer;
   padding-left: 78px;
+  padding-top: 17px;
   line-height: 26px;
   font-weight: 700;
   font-size: 18px;
   text-transform: none;
+  min-height: 58px;
 
   &::before {
     position: absolute;
@@ -68,6 +66,7 @@
   width: 20px;
   height: 20px;
   z-index: 1;
+  margin: 0;
   cursor: pointer;
 
   &:checked + .item-radio__label::after {
